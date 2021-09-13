@@ -15,16 +15,29 @@ Basic knowledge:
 
 ## Sample code:
 ````
-const apiUrl = "https://api.chucknorris.io/jokes/random";
-const jokeEl = document.getElementById("joke");
+function indexEqualsValue(arr) {
+  let left = 0;
+  let rigth = arr.length - 1;
+  let mid;
 
-async function getJoke() {
-    const joke = await fetch(apiUrl).then(response => response.json()).then(data => data.value);
-    console.log(joke);
-    jokeEl.textContent = joke;
+  let result = -1;
+
+  while (left <= rigth) {
+
+    mid = Math.round((rigth - left) / 2) + left;
+
+    if (arr[mid] === mid) {
+      result = arr[mid];
+      rigth = mid - 1;
+    } else if (arr[mid] > mid) {
+      rigth = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+  
+  return result;
 }
-
-getJoke() 
 ````
 ## Work experience:
 I have no experience in web development, so I want to get it in a RSSchool.
