@@ -11,6 +11,7 @@ Basic knowledge:
 - HTML
 - CSS
 - JavaScript
+- Git
 
 ## Sample code:
 ````
