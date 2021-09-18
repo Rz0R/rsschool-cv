@@ -1,9 +1,66 @@
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --fs-h1: 72px;
+    --fs-h2: 36px;
+    --fs-h3: 24px;
+    --fs-body: 18px;
+
+    --clr-light: #ffffff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    font-family: var(--ff-primary);
+    line-height: 1.6;
+    font-size: var(--fs-body);
+}
+
 body._lock {
     overflow: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    font-weight: var(--fw-bold);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+section,
+.header__intro {
+    padding: 80px 0;
 }
 
 .container {
@@ -11,4 +68,97 @@ body._lock {
     margin: 0 auto;
     box-sizing: content-box;
     padding: 0 10px;
+}
+
+.section__title,
+.section__subtitle {
+    margin-bottom: 18px;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro {
+    background: var(--clr-accent);
+    padding: 6px 24px;
+    font-family: var(--ff-secondary);
+
+}
+
+
+
+/* ------ Menu ---------- */
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu__item {
+    padding: 10px 0;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+
+/* ------- Intro --------- */
+
+.intro {
+    position: relative;
+    text-align: center;
+} 
+
+.section__subtitle--intro {
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+
+.intro__img {
+    box-shadow: var(--bs);
+    width: 100%;
+}
+
+@media (min-width:600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 20px;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+
+        text-align: left;
+    }
+
+    .intro__img {
+        grid-area: img;
+        min-width: 190px;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -30px;
+        width: calc(100% + 30px);
+    }
 }
