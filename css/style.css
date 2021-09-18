@@ -221,6 +221,7 @@ section,
     .section__subtitle--about {
         text-align: left;
     }
+
     .section__title--about {
         grid-area: title;
     }
@@ -242,3 +243,53 @@ section,
         grid-area: img;
     }
 }
+
+/* ------- Skills --------- */
+
+.section__title--skills {
+    text-transform: uppercase;
+}
+
+.progress {
+    height: 10px;
+    position: relative;
+    background: var(--clr-dark);
+    width: 100%;
+    display: block;
+    margin: auto 0;
+}
+
+.progress > span {
+    display: block;
+    height: 100%;
+    background-color: var(--clr-accent);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 800px) {
+
+    .progressbars {
+        padding: 0 50px;
+    }
+
+    .progressbars__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .progressbars__item:not(:last-child) {
+        margin-bottom: 10px;
+    } 
+
+    .progressbars__item-text {
+        font-size: 20px;
+    }
+
+    .progress {
+        width: 85%;
+    }
+
+    
+}
+
