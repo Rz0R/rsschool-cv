@@ -1,13 +1,13 @@
-const iconMenu = document.querySelector('.menu__icon');
-const menuBody = document.querySelector('.menu__body');
+const menuButton = document.querySelector('.menu__button');
+const menuLinks = document.querySelectorAll('.menu__link');
 
-if (iconMenu) {
-    iconMenu.addEventListener('click', showMenu);
-}
+menuButton.addEventListener('click', function() {
+    document.body.classList.toggle('menu__button--open');
+});
 
-function showMenu() {
-    document.body.classList.toggle('_lock');
-    menuBody.classList.toggle('_active');
-    iconMenu.classList.toggle('_active');
+for (const menuLink of menuLinks) {
+    menuLink.addEventListener('click', function() {
+        document.body.classList.remove('menu__button--open');
+    });
 }
 
