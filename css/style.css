@@ -344,3 +344,48 @@ section,
 .section__title--code {
     text-transform: uppercase;
 }
+
+
+
+
+/* ------- Footer --------- */
+
+.footer {
+    background: #111111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+
+
+@media(hover: hover) and (pointer: fine) {
+    .footer a:hover {
+        opacity: 0.6;
+    }
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.year {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+.github-icon {
+    width: 32px;
+}
+
+.rsshcool-icon {
+    width: 80px;
+}
