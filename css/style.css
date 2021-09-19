@@ -288,8 +288,53 @@ section,
 
     .progress {
         width: 85%;
-    }
-
-    
+    }  
 }
 
+
+/* ------- Projects --------- */
+
+.projects {
+    text-align: center;
+}
+
+.section__title--projects {
+    text-transform: uppercase;
+}
+
+.section__subtitle--projects {
+    font-size: var(--fs-h3);
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 30px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.portfolio__item {
+    display: block;
+    background: var(--clr-accent);
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: 
+        transform 0.75s cubic-bezier(.5, 0, .5, 1),
+        opacity 0.3s linear;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    .portfolio__img:hover {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.portfolio__project-name {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
