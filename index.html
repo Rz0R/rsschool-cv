@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reboot.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900&family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -22,7 +21,7 @@
     <header class="header" id="home">
         <div class="container">
             <div class="header__top">
-                <div class="header__menu menu" aria-label="toggle navigation">
+                <div class="header__menu menu">
                     <button class="menu__button">
                         <span class="hamburger"></span>
                     </button>
@@ -57,7 +56,7 @@
                 </div>
             </div>
             <!-- / header-top -->
-            <div class="header__intro intro" id="home">
+            <div class="header__intro intro">
                 <h1 class="section__title section__title--intro">
                     Hi, I am <strong>Pavel Vasinsky</strong>
                 </h1>
@@ -76,9 +75,9 @@
                     <h2 class="section__title section__title--about">About me</h2>
                     <p class="section__subtitle section__subtitle--about">Beginner Web Developer</p>
                     <p class="about__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua.
+                        I am Pavel Vasinsky. I graduated Vladivostok State University Of Economics And Service with a degree in System Engineering.
+                        At the moment, I work as a system administrator. But I want to change my job to a web developer. 
+                        And that's why I'm studying in this course.
                     </p>
                     <div class="about__video">
                         <iframe class="about__iframe" src="https://www.youtube.com/embed/kPZQsL6az4o" allowfullscreen></iframe>
@@ -186,29 +185,14 @@
             <div class="container">
                 <h2 class="section__title section__title--code">code</h2>
                 <pre><code class="javascript">
-function indexEqualsValue(arr) {
-    let left = 0;
-    let rigth = arr.length - 1;
-    let mid;
-
-    let result = -1;
-
-    while (left <= rigth) {
-
-        mid = Math.round((rigth - left) / 2) + left;
-
-        if (arr[mid] === mid) {
-            result = arr[mid];
-            rigth = mid - 1;
-        } else if (arr[mid] > mid) {
-            rigth = mid - 1;
-        } else {
-            left = mid + 1;
+    function rgb(r, g, b){
+        const clamp = (num) => Math.min(Math.max(num, 0), 255);
+        let result = '';
+        for (const color of arguments) {
+            result += `0${clamp(color).toString(16)}`.slice(-2).toUpperCase();
         }
+        return result;
     }
-
-    return result;
-}
                 </code></pre>
             </div>
         </section>
@@ -220,22 +204,20 @@ function indexEqualsValue(arr) {
                 <div class="education__items">
                     <div class="education__item">
                         <a class="education__item-name" href="https://eng.vvsu.ru/" target="_blank">VSUES</a>
-                        <p class="education__item-year">2004-2009</p>
-                        <p class="education__item-descr">System Engineer</p>
+                        <h4 class="education__item-year">2004-2009</h4>
+                        <h5 class="education__item-descr">System Engineer</h5>
                     </div>
                     <div class="education__item">
                         <a class="education__item-name" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>
-                        <p class="education__item-year">2021</p>
-                        <p class="education__item-descr">JS Algorithms and Data Structures</p>
+                        <h4 class="education__item-year">2021</h4>
+                        <h5 class="education__item-descr">JS Algorithms and Data Structures</h5>
                     </div>
                     <div class="education__item">
                         <a class="education__item-name" href="https://rs.school/js/" target="_blank">Rolling Scope School</a>
-                        <p class="education__item-year">2021</p>
-                        <p class="education__item-descr">JS Pre-School</p>
+                        <h4 class="education__item-year">2021</h4>
+                        <h5 class="education__item-descr">JS Pre-School</h5>
                     </div>
                 </div>
-
-            </div>
 
             </div>
         </section>
@@ -328,7 +310,7 @@ function indexEqualsValue(arr) {
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 
 </html>

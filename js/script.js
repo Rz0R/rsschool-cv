@@ -1,3 +1,5 @@
+import { displayRaiting } from './raiting.js';
+
 const menuButton = document.querySelector('.menu__button');
 const menuLinks = document.querySelectorAll('.menu__link');
 
@@ -10,3 +12,6 @@ for (const menuLink of menuLinks) {
         document.body.classList.remove('menu__button--open');
     });
 }
+
+// self-raiting
+displayRaiting();
