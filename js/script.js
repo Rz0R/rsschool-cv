@@ -10,4 +10,3 @@ for (const menuLink of menuLinks) {
         document.body.classList.remove('menu__button--open');
     });
 }
-
