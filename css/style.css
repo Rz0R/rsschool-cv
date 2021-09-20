@@ -521,6 +521,48 @@ section,
     text-transform: uppercase;
 }
 
+code {
+    font-size: 14px;
+}
+
+
+/* ------- Education ------- */
+
+.section__title--education {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.education__item-name,
+.education__item-name:visited {
+    color: var(--clr-accent);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+@media(hover: hover) and (pointer: fine) {
+    .education__item-name:hover {
+        opacity: 0.7;
+    }
+}
+
+.education__item {
+    padding: 10px;
+    flex: 1 0 300px;
+    background-color: #111111;;
+}
+
+.education__items {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* ------- Language ------- */
+
 
 
 
