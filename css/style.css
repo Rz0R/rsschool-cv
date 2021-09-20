@@ -563,7 +563,32 @@ code {
 
 /* ------- Language ------- */
 
+.section__title--language {
+    text-transform: uppercase;
+}
 
+.language__text {
+    font-size: var(--fs-h3);
+}
+
+/* ------- Contacts ------- */
+
+.section__title--contacts {
+    text-transform: uppercase;
+}
+
+.contacts__list {
+    padding-left: 50px;
+    font-size: var(--fs-h3);
+}
+
+.contacts__list li a {
+    text-decoration: none;
+
+    font-style: italic;
+    color: inherit;
+    padding-left: 5px;
+}
 
 
 /* ------- Footer --------- */
