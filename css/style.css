@@ -110,22 +110,6 @@ section,
 
 /* ------ Menu ---------- */
 
-/* .menu__list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.menu__item {
-    text-transform: uppercase;
-    padding: 10px 0;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.menu__item:not(:last-child) {
-    margin-right: 20px;
-} */
-
 .header__top {
     display: flex;
     justify-content: end;
@@ -301,8 +285,6 @@ section,
 
 @media (min-width:800px) {
     .intro {
-        /* padding-left: 30px;
-        padding-right: 30px; */
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -364,7 +346,7 @@ section,
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    padding-top: 56.25%; 
 }
 
 .about__iframe {
