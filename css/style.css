@@ -98,12 +98,19 @@ section,
     font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about {
+.section__subtitle--intro {
     background: var(--clr-accent);
     padding: 6px 24px;
     font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+}
 
+.section__subtitle--about {
+    background: var(--clr-accent);
+    padding: 15px 24px;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-reg);
 }
 
 
