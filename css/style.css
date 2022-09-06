@@ -428,6 +428,30 @@ section,
   overflow: hidden;
 }
 
+.progress__70 {
+  width: 70%;
+}
+
+.progress__65 {
+  width: 65%;
+}
+
+.progress__55 {
+  width: 55%;
+}
+
+.progress__45 {
+  width: 45%;
+}
+
+.progress__30 {
+  width: 30%;
+}
+
+.progress__10 {
+  width: 10%;
+}
+
 @media (min-width: 800px) {
   .progressbars {
     padding: 0 50px;
