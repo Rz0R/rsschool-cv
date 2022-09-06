@@ -280,9 +280,10 @@ section,
 }
 
 .intro__img {
-  box-shadow: var(--bs);
   max-width: 250px;
   margin: 0 auto;
+  box-shadow: var(--bs);
+  width: 100%;
 }
 
 @media (min-width: 800px) {
